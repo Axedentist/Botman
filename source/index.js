@@ -6,8 +6,9 @@ const YTDL = require("ytdl-core");
 var bot = new Discord.Client();
 
 
-const TOKEN = client.login(config.TOKEN)
-const PREFIX = client.login(config.PREFIX) 
+const TOKEN = "YOUR TOKEN HERE"
+const PREFIX = "!" 
+const ROLES = ["YOUR TOP ROLES HERE"] //Comma delimited list of roles that have kick/ban rights
 
 bot.on("guildMemberAdd", member => {
     var welcome = greetings[Math.floor(Math.random() * greetings.length)]
@@ -172,7 +173,7 @@ bot.on("message", function (message) {
             break;
         case "kick":
             // This command must be limited to mods and admins. In this example we just hardcode the role names.
-            if(!message.member.roles.some(r=>["Administrator", "Moderator", "The Vanguard", "Real people not actors", "Admin"].includes(r.name)) )
+            if(!message.member.roles.some(r=>ROLES.includes(r.name)) )
                 return message.reply("Sorry, you don't have permissions to use this!");                
             if(!member)
                 return message.reply("Please mention a valid member of this server.");
