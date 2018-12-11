@@ -216,11 +216,11 @@ bot.on("message", function (message) {
             message.channel.send(flip[Math.floor(Math.random() * flip.length)])
             break;
 
-        case "roastme": // select a random response from the roasts variable
+        case "roastme": // select a random response from the roasts array
             message.reply(roasts[Math.floor(Math.random() * roasts.length)])
             break;
 
-        case "dadjoke": // select a random response from the dadjokes variable
+        case "dadjoke": // select a random response from the dadjokes array
             message.channel.send(dadjokes[Math.floor(Math.random() * dadjokes.length)])
             break;
 
@@ -265,7 +265,7 @@ bot.on("message", function (message) {
             break;
 
         case "silverstar": // send a silver star image.
-            message.channel.send("http://i0.kym-cdn.com/photos/images/facebook/000/325/924/7ab.png")
+            message.channel.send(silverstar)
             break;
 
         case "badbot": // Censor their input, then message them a personal response

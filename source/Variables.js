@@ -54,7 +54,7 @@ var challenge = [
     "You're in WW2 now. Kar98, Tommy, double barrel, and 1911 are the guns available to you.",
     "Use only bandages and energy drink when healing. Must use at least 5 bandages and 2 energy drink to count",
     "9mm weapons only.",
-    "Shoot at someone when ever possible.",
+    "Shoot at someone whenever possible.",
     "Do not get in a vehicle.",
     "Lvl 3 helmet only (No vest)",
     "only pick up the AKM. Full auto at all times. Must go through at least 60 bullets.",
@@ -83,7 +83,7 @@ var challenge = [
 
 var goodbot = [
     "Dereks bot can suck it",
-    "Kiss ass",
+    "Brown noser",
     "Thanks friend!",
     "I appreciate it!",
     "Bow to me!!!"
@@ -95,7 +95,7 @@ var badbot = [
     "LALALALALA Can't hear you",
     "What was that?",
     "I'm sorry, did you say something?",
-    "!baduser"
+    PREFiX+"baduser"
 ];
 
 var fortunes = [
@@ -114,7 +114,7 @@ var fortunes = [
     "Better not to tell you now",
     "Should you really be consulting with a computer?",
     "Concentrate and ask again",
-    "Maybe, maybe not. Maybe go fuck yourself",
+    "Maybe, maybe not.",
     "No",
     "Do not count on it",
     "My sources say no",
@@ -149,7 +149,6 @@ var roasts = [
     "You have the perfect face for radio.",
     "It's scary to think that people like you are graduating from college",
     "You're proof that God has a sense of humor.",
-    "The best place for you in the family tree is hanging from it (Olson, 2017)",
     "Were you made in a lab, cause damn you are one failed experiment",
     "Bob the builder can't fix your trainwreck of a life.",
     "The Twin towers weren't even the biggest collapse of the 2000's and they have a 2:1 advantage on your life.",
@@ -196,3 +195,5 @@ var dadjokes = [
     "I had to go to court about a robbery at an Apple Store. I was an iWitness",
     "Working for a calender factory is so strict. You can't take even a couple days off.",
 ]
+
+var silverstar = "http://i0.kym-cdn.com/photos/images/facebook/000/325/924/7ab.png"
