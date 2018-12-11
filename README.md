@@ -1,6 +1,24 @@
 
 # Botman
-
+## How to start
+1. Download Node.js at Nodejs.org
+2. Download a text editor (Visual Studio Code recommended)
+3. Head to http://discordapp.com/developers/applications/me and click "New Application" You will need a discord account if you do not have one.
+4. Name the app, customize it how you would like. 
+5. Click the Token reveal link under "Client Secret" *DO NOT SHARE THIS CODE*
+6. Go to the Tokens JSON file and input the token for your bot, your desired prefix (Recommend '#' or '!' or something similiar and memorable), as well as your ID (NOTE: OwnerID not used in anything currently functional)
+7. Add your bot to your server
+8. Download Botman code from github
+9. Open Command prompt and cd into your Botman Folder
+10. input the following code into command prompt to leverage Node.js
+```bash
+npm install discord.io winston –save.
+```
+11. in command prompt type to turn on the bot
+```bash
+node Main.js
+```
+12. Now message the bot and see it reply. Try using your prefix with ping as your first command to test the connection.
 ## Common Commands
 
 ### ping 
@@ -20,7 +38,7 @@ When you don\'t quite deserve a gold star.
 ### goodbot
 Tell Botman that he is a good bot.
 ### badbot
-Tell Botman he is a bad bot. (This will never happen)
+Tell Botman he is a bad bot. This will *never* happen
 ### backmeup
 For when you throw out a sick burn and you need someone to back you up.
 ### roastme
