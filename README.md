@@ -7,7 +7,7 @@
 4. Name the app, customize it how you would like. 
 5. Click the Token reveal link under "Client Secret" *DO NOT SHARE THIS CODE*
 6. Go to the Tokens JSON file and input the token for your bot, your desired prefix (Recommend '#' or '!' or something similiar and memorable), as well as your ID (NOTE: OwnerID not used in anything currently functional)
-7. Add your bot to your server
+7. Add your bot to your server by going to https://discordapp.com/oauth2/authorize?&client_id=CLIENTID&scope=bot&permissions=8 and replace CLIENTID with the clientID listed to the left of your token.
 8. Download Botman code from github
 9. Open Command prompt and cd into your Botman Folder
 10. input the following code into command prompt to leverage Node.js
@@ -20,7 +20,8 @@ node Main.js
 ```
 12. Now message the bot and see it reply. Try using your prefix with ping as your first command to test the connection.
 ## Common Commands
-
+Use your prefix before the commands to have the bot look for the command. 
+ex. !ping or #ping
 ### ping 
 Sends back 'pong!' with a counter of how long the response took.
 ### flipcoin 
@@ -60,7 +61,7 @@ Add a valid youtube link to the queue
 Shows the current queue, up to 15 songs shown.
 ### play
 Play the music queue if already joined to a voice channel
-## the following commands only function while the play command is running!!
+## The following commands only function while the play command is running!!
 ### pause
 pauses the music
 ### resume
