@@ -271,6 +271,7 @@ bot.on("message", function (message) {
         case "badbot": // Censor their input, then message them a personal response
             message.delete();
             message.channel.send(badbot[Math.floor(Math.random() * badbot.length)]);
+            // Send a DM to the jerk
             message.author.send(copypasta[Math.floor(Math.random() * copypasta.length)]);
             break;
 
