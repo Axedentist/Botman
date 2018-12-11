@@ -171,12 +171,12 @@ var roasts = [
     "If I measured the downward slope of your life using y = mx+b, m would be undefined.",
 ]
 
-var flip = [
+global.Array.flip = [
     "Heads",
     "Tails",
 ];
 
-var dadjokes = [
+global.Array.dadjokes = [
     'Atheism is a non-prophet organization.',
     'My friend was fired from his job at the road department for stealing. I have to say I saw it coming. The last time I was at his house all the signs were there.',
     'What do you call a dog with a surround system? A sub-woofer.',
@@ -196,4 +196,4 @@ var dadjokes = [
     "Working for a calender factory is so strict. You can't take even a couple days off.",
 ]
 
-var silverstar = "http://i0.kym-cdn.com/photos/images/facebook/000/325/924/7ab.png"
+global.Array.silverstar = "http://i0.kym-cdn.com/photos/images/facebook/000/325/924/7ab.png"

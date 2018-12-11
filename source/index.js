@@ -2,12 +2,13 @@
 
 const Discord = require("Discord.js");
 const YTDL = require("ytdl-core");
+const config = require("./config.json");
 
 var bot = new Discord.Client();
 
 
-const TOKEN = "YOUR TOKEN HERE"
-const PREFIX = "!" 
+const TOKEN = config.TOKEN
+const PREFIX = config.PREFIX
 const ROLES = ["YOUR TOP ROLES HERE"] //Comma delimited list of roles that have kick/ban rights
 
 bot.on("guildMemberAdd", member => {
