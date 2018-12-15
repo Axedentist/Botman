@@ -26,9 +26,9 @@ ex. !ping or #ping
 Sends back 'pong!' with a counter of how long the response took.
 ### flipcoin 
 Flips a coin and responds with 'Heads' or 'Tails'.
-### pubgchallenge
+### challenge
 Messages you a randomized challenge for your next PUBG match.
-### pubgteamchallenge
+### teamchallenge
 Gives a challenge but for the whole family.
 ### dropzone
 Gives you a random place to drop on the map.
