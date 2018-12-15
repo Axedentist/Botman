@@ -40,8 +40,6 @@ When you don\'t quite deserve a gold star.
 Tell Botman that he is a good bot.
 ### badbot
 Tell Botman he is a bad bot. This will *never* happen
-### backmeup
-For when you throw out a sick burn and you need someone to back you up.
 ### roastme
 Self confidence levels too high? Try this command.
 ### dadjoke
