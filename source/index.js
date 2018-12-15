@@ -204,7 +204,7 @@ bot.on("message", function (message) {
 
         case "purgatory":
             // if they are not in the required roles...
-            if (!message.member.roles.some(r => ["The Vanguard", "Real people not actors", "admin"].includes(r.name)))
+            if (!message.member.roles.some(r => ROLES.includes(r.name)))
                 //TO DO: DETECT admin role and check if they are in it instead of hardcoded values
                 return message.reply("Sorry, you don't have permissions to use this!");
             // if member cannot be found...
