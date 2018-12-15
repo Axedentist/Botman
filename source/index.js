@@ -4,12 +4,14 @@ const Discord = require("Discord.js");
 const YTDL = require("ytdl-core");
 const config = require("./config.json");
 
+const Variables = require("./Variables.js")
 var bot = new Discord.Client();
-
 
 const TOKEN = config.TOKEN
 const PREFIX = config.PREFIX
-const ROLES = ["YOUR TOP ROLES HERE"] //Comma delimited list of roles that have kick/ban rights
+const OWNERID = config.OWNERID
+const ROLES = ["INSERT VALID ROLES HERE"] //Comma delimited list of roles that have kick/ban rights
+
 
 bot.on("guildMemberAdd", member => {
     var welcome = greetings[Math.floor(Math.random() * greetings.length)]
@@ -28,8 +30,12 @@ bot.on("message", function (message) {
     var member = message.mentions.members.first();
     var reason = input.slice(1).join(' ');
     
+    if (message.author.id == "329133638832881664") // if david, reject cuz he sucks.
+    {
+        message.channel.send("You are not my dad!")
+        return;
+    }
     switch (input, args) {
-
         case "help":
             let help = ['```xl'
                 ,'!ping : "Sends back \'pong!\' with a counter of how long the response took."'
@@ -60,6 +66,16 @@ bot.on("message", function (message) {
                 ,'!volume-(---) : "decreases volume by 2%/-"'
                 ,'```'];
             message.channel.send(help.join('\n'));
+            break;
+        case "checkowner":
+            if(message.author.id !== OWNERID) 
+                message.channel.send("You are not my master")
+            else
+                message.channel.send("What is thy bidding my master")
+            break;
+        case "ping":
+            m = 0;
+            message.channel.send(`pong! API Latency is ${Math.round(bot.ping)}ms`)
             break;
         case "play":
             // if the queue is empty then tell them to add some songs
@@ -208,29 +224,29 @@ bot.on("message", function (message) {
         case "say": 
             // To get the "message" itself we join the `args` back into a string with spaces: 
             let sayMessage = input.join(' ');
-            // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+            // Then we delete the command message (sneaky, right?).
             message.delete().catch(O_o=>{});
             // And we get the bot to say the thing:
             message.channel.send(sayMessage);
             break;
      
         case "flipcoin":
-            message.channel.send(flip[Math.floor(Math.random() * flip.length)])
+            message.channel.send(Variables.flip[Math.floor(Math.random() * Variables.flip.length)])
             break;
 
-        case "roastme": // select a random response from the roasts array
-            message.reply(roasts[Math.floor(Math.random() * roasts.length)])
+        case "roastme": // select a random response from the roasts variable
+            message.reply(Variables.roasts[Math.floor(Math.random() * Variables.roasts.length)])
             break;
 
-        case "dadjoke": // select a random response from the dadjokes array
-            message.channel.send(dadjokes[Math.floor(Math.random() * dadjokes.length)])
+        case "dadjoke": // select a random response from the dadjokes variable
+            message.channel.send(Variables.dadjokes[Math.floor(Math.random() * Variables.dadjokes.length)])
             break;
 
         case "challenge":
             //if no input is detected, send the challenge to the person who called the function.
             if (input == "") {
                 message.channel.send("No players in squad were defined. Sending Challenge to your inbox")
-                message.author.send("Here is your challenge: " + challenge[Math.floor(Math.random() * challenge.length)])
+                message.author.send("Here is your challenge: " + Variables.challenge[Math.floor(Math.random() * Variables.challenge.length)])
                 break;
             }
             //split the input into 4 different sections based on spaces.
@@ -248,40 +264,39 @@ bot.on("message", function (message) {
             // send the challenge to the picked person's inbox
             bot.fetchUser(TheID)
                 .then(user => {
-                    user.send("Here is your challenge: " + challenge[Math.floor(Math.random() * challenge.length)])
+                    user.send("Here is your challenge: " + Variables.challenge[Math.floor(Math.random() * Variables.challenge.length)])
                 })
             //give feedback confirmation that the challenge has been sent.
             message.channel.send("Challenge has been sent")
             break;
 
         case "teamchallenge": // challenge bot but sends to the channel to the whole team
-            message.channel.send(challenge[Math.floor(Math.random() * challenge.length)])
+            message.channel.send(Variables.challenge[Math.floor(Math.random() * Variables.challenge.length)])
             break;
 
         case "dropzone": // tells the squad where to drop
-            message.channel.send(dropzones[Math.floor(Math.random() * dropzones.length)])
+            message.channel.send(Variables.dropzones[Math.floor(Math.random() * Variables.dropzones.length)])
             break;
 
         case "goodbot": 
-            message.channel.send(goodbot[Math.floor(Math.random() * goodbot.length)])
+            message.channel.send(Variables.goodbot[Math.floor(Math.random() * Variables.goodbot.length)])
             break;
 
         case "silverstar": // send a silver star image.
-            message.channel.send(silverstar)
+            message.channel.send("http://i0.kym-cdn.com/photos/images/facebook/000/325/924/7ab.png")
             break;
 
         case "badbot": // Censor their input, then message them a personal response
             message.delete();
-            message.channel.send(badbot[Math.floor(Math.random() * badbot.length)]);
-            // Send a DM to the jerk
-            message.author.send(copypasta[Math.floor(Math.random() * copypasta.length)]);
+            message.channel.send(Variables.badbot[Math.floor(Math.random() * Variables.badbot.length)]);
+            message.author.send(Variables.copypasta[Math.floor(Math.random() * Variables.copypasta.length)]);
             break;
 
         case "eightball": // select a random fortune
-            message.channel.send(fortunes[Math.floor(Math.random() * fortunes.length)])
+            message.channel.send(Variables.fortunes[Math.floor(Math.random() * Variables.fortunes.length)])
             break;
-    //    default:
-    //            message.channel.send("That is not a valid command. Please use !help to see a list of commands.")
+        default:
+                message.channel.send("That is not a valid command. Please use !help to see a list of commands.")
     }
 });
 

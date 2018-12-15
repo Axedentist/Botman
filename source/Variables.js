@@ -95,7 +95,7 @@ var badbot = [
     "LALALALALA Can't hear you",
     "What was that?",
     "I'm sorry, did you say something?",
-    PREFiX+"baduser"
+    "baduser"
 ];
 
 var fortunes = [
@@ -171,12 +171,12 @@ var roasts = [
     "If I measured the downward slope of your life using y = mx+b, m would be undefined.",
 ]
 
-global.Array.flip = [
+var flip = [
     "Heads",
     "Tails",
 ];
 
-global.Array.dadjokes = [
+var dadjokes = [
     'Atheism is a non-prophet organization.',
     'My friend was fired from his job at the road department for stealing. I have to say I saw it coming. The last time I was at his house all the signs were there.',
     'What do you call a dog with a surround system? A sub-woofer.',
@@ -196,4 +196,4 @@ global.Array.dadjokes = [
     "Working for a calender factory is so strict. You can't take even a couple days off.",
 ]
 
-global.Array.silverstar = "http://i0.kym-cdn.com/photos/images/facebook/000/325/924/7ab.png"
+var silverstar = "http://i0.kym-cdn.com/photos/images/facebook/000/325/924/7ab.png"
