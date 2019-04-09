@@ -30,11 +30,6 @@ bot.on("message", function (message) {
     var member = message.mentions.members.first();
     var reason = input.slice(1).join(' ');
     
-    if (message.author.id == "329133638832881664") // if david, reject cuz he sucks.
-    {
-        message.channel.send("You are not my dad!")
-        return;
-    }
     switch (input, args) {
         case "help":
             let help = ['```xl'
@@ -68,7 +63,7 @@ bot.on("message", function (message) {
             break;
         case "checkowner":
             if(message.author.id !== OWNERID) 
-                message.channel.send("You are not my master")
+                message.channel.send("You are not my dad")
             else
                 message.channel.send("What is thy bidding my master")
             break;

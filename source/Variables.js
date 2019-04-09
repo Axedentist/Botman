@@ -169,6 +169,17 @@ var roasts = [
     "You keep wondering why everyone talks about you. But deep down you know.",
     "You are the human equivalent of a participation award.",
     "If I measured the downward slope of your life using y = mx+b, m would be undefined.",
+    "I bet your parents try to change the subject when their friends ask how you’re doing.",
+    "You may not be the dumbest person on Earth, but you better hope he doesn't die",
+    "If you were any more inbred you'd be a sandwich",
+    "Your family tree is a straight line",
+    "You are so lazy, you are going to marry a pregnant woman",
+    "You're a complete tool but not half as useful",
+    "I expected nothing and you are still disappointing",
+    "You're the reason why tubes of toothpaste have instructions on them",
+    "You're just a collection of personality flaws masquerading as a person",
+    "Mr. Rogers would be disappointed in you",
+    "You look like you spend more time on regret management than goal achievement.",
 ]
 
 var flip = [
